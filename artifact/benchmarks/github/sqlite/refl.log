@@ -1,0 +1,6 @@
+Class.getDeclaredField;<java.lang.invoke.MethodHandle: java.lang.invoke.LambdaForm form>;java.lang.invoke.MethodHandle.<clinit>;1451;isAccessible=false;
+Class.newInstance;sun.launcher.resources.launcher;java.util.ResourceBundle$Control.newBundle;2662;;
+Constructor.getModifiers;<sun.launcher.resources.launcher: void <init>()>;java.lang.Class.newInstance;;isAccessible=true;
+Constructor.newInstance;<sun.launcher.resources.launcher: void <init>()>;java.lang.Class.newInstance;;isAccessible=true;
+Field.getName;<java.lang.invoke.MethodHandle: java.lang.invoke.LambdaForm form>;java.lang.Class.searchFields;;isAccessible=false;
+Field.getName;<java.lang.invoke.MethodHandle: java.lang.invoke.MethodType type>;java.lang.Class.searchFields;;isAccessible=false;

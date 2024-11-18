@@ -1,0 +1,85 @@
+\begin{table}
+\centering
+\caption{Precision and Efficiency results of CSC, Z-3obj, C-3obj, D-3obj, and M-3obj, whereas CI and 3OBJ are presented as baselines.}\resizebox{\textwidth}{!}{%
+\renewcommand{\arraystretch}{1.1}
+\setlength{\aboverulesep}{1.5pt}  % Space above the rule
+\setlength{\belowrulesep}{1.5pt}  % Space below the rule
+\setlength{\tabcolsep}{0.14em}\begin{tabular}{c|c|cc|cccc||c|c|cc|cccc||c|c|cc|cccc}
+
+\toprule
+Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}&Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}&Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}\\
+ \midrule\multirow{6}{*}{antlr}&  3obj& 526.2& -& 450& 1624& 7805& 51237&\multirow{6}{*}{avrora}&  3obj& 2592.0& -& 496& 929& 10939& 48330&\multirow{6}{*}{batik}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.8& 108.7X& 1124& 1976& 8190& 57341& &  ci& 5.5& 470.4X& 1188& 1372& 11373& 55476& &  ci& 13.3&  >406.3X& 3403& 5810& 20994& 127604\\
+&  CSC& 5.7& 92.0X& 812& 1896& 8153& 54460& &  CSC& 6.3& 409.5X& 882& 1283& 11282& 52535& &  CSC& 18.6&  >290.2X& 2846& 5524& 20819& 121105\\
+&  Z-3obj& 225.0& 2.3X& 473& 1643& 7835& 51364& &  Z-3obj& 878.4& 3.0X& 536& 944& 10969& 48439& &  Z-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+&  C-3obj& 119.6& 4.4X& 450& 1624& 7805& 51237& &  C-3obj& 578.7& 4.5X& 496& 929& 10939& 48330& &  C-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+&  D-3obj& 7.8& 67.8X& 450& 1627& 7805& 51240& &  D-3obj& 6.1& 424.2X& 496& 931& 10939& 48332& &  D-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+& \cCell M-3obj&\cCell \textcolor{red}{2.7}&\cCell 197.8X&\cCell 450&\cCell 1626&\cCell 7805&\cCell 51239& & \cCell M-3obj&\cCell \textcolor{red}{2.9}&\cCell 887.7X&\cCell 496&\cCell 930&\cCell 10939&\cCell 48336& & \cCell M-3obj&\cCell 745.5& \cCell >7.2X&\cCell 2044&\cCell 4930&\cCell 20243&\cCell 106779\\
+\midrule\multirow{6}{*}{biojava}&  3obj& 1053.9& -& 347& 837& 7439& 34756&\multirow{6}{*}{bloat}&  3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -&\multirow{6}{*}{$\begin{array}{c}\text{bytecode-}\\ \text{viewer}\end{array}$}&  3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.5& 232.7X& 1046& 1236& 7910& 41678& &  ci& 5.5&  >987.2X& 2082& 2249& 9454& 67338& &  ci& 9.4&  >571.4X& 4723& 5616& 14637& 110795\\
+&  CSC& 5.7& 186.5X& 687& 1150& 7853& 38403& &  CSC& 7.6&  >710.5X& 1594& 2166& 9414& 63909& &  CSC& 21.7&  >249.0X& 4366& 5547& 14601& 106506\\
+&  Z-3obj& 202.8& 5.2X& 369& 870& 7486& 34901& &  Z-3obj& 4772.6&  >1.1X& 1215& 1583& 9045& 56555& &  Z-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+&  C-3obj& 184.3& 5.7X& 347& 837& 7439& 34756& &  C-3obj& 1447.0&  >3.7X& 1188& 1552& 9003& 56348& &  C-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+&  D-3obj& 5.7& 185.9X& 347& 839& 7439& 34758& &  D-3obj& 19.6&  >275.8X& 1188& 1555& 9003& 56351& &  D-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+& \cCell M-3obj&\cCell \textcolor{red}{1.9}&\cCell 543.3X&\cCell 347&\cCell 838&\cCell 7439&\cCell 34757& & \cCell M-3obj&\cCell 9.4& \cCell >572.6X&\cCell 1188&\cCell 1554&\cCell 9003&\cCell 56350& & \cCell M-3obj&\cCell 1825.6& \cCell >3.0X&\cCell 3661&\cCell 4195&\cCell 14042&\cCell 94460\\
+\midrule\multirow{6}{*}{chart}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{$\begin{array}{c}\text{check-}\\ \text{style}\end{array}$}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{$\begin{array}{c}\text{classy-}\\ \text{shark}\end{array}$}&  3obj& 3020.7& -& 484& 1106& 9384& 44166\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 9.2&  >587.6X& 2560& 2703& 15923& 86433& &  ci& 8.2&  >657.7X& 1939& 2760& 12766& 80169& &  ci& 5.3& 566.7X& 1323& 1682& 10178& 56231\\
+&  CSC& 10.4&  >519.7X& 1914& 2405& 15545& 78847& &  CSC& 10.3&  >521.7X& 1503& 2641& 12713& 74197& &  CSC& 7.1& 425.4X& 876& 1400& 9489& 48577\\
+&  Z-3obj& 392.5&  >13.8X& 1280& 2021& 15204& 72544& &  Z-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -& &  Z-3obj& 1393.7& 2.2X& 512& 1113& 9407& 44251\\
+&  C-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -& &  C-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -& &  C-3obj& 1046.5& 2.9X& 484& 1106& 9384& 44166\\
+&  D-3obj& 152.8&  >35.3X& 1230& 2005& 15119& 72228& &  D-3obj& 24.1&  >224.4X& 996& 2172& 12260& 66188& &  D-3obj& 8.3& 363.5X& 484& 1108& 9384& 44168\\
+& \cCell M-3obj&\cCell 34.1& \cCell >158.5X&\cCell 1230&\cCell 2004&\cCell 15119&\cCell 72227& & \cCell M-3obj&\cCell 10.4& \cCell >517.2X&\cCell 1000&\cCell 2171&\cCell 12260&\cCell 66188& & \cCell M-3obj&\cCell \textcolor{red}{3.3}&\cCell 907.1X&\cCell 484&\cCell 1107&\cCell 9386&\cCell 44176\\
+\midrule\multirow{6}{*}{dcevm}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{ddjava}&  3obj& 398.8& -& 312& 810& 6840& 32226&\multirow{6}{*}{eclipse}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 13.5&  >399.4X& 3593& 5669& 21503& 124314& &  ci& 4.1& 98.0X& 880& 1177& 7249& 38462& &  ci& 18.8&  >287.7X& 5090& 10672& 23386& 182975\\
+&  CSC& 15.2&  >355.0X& 2917& 4932& 20958& 108001& &  CSC& 4.8& 83.4X& 618& 1093& 7205& 35797& &  CSC& 20.7&  >261.4X& 4282& 10250& 22977& 172521\\
+&  Z-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -& &  Z-3obj& 118.3& 3.4X& 336& 823& 6855& 32290& &  Z-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -\\
+&  C-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -& &  C-3obj& 113.6& 3.5X& 312& 810& 6840& 32226& &  C-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+&  D-3obj& 1076.8&  >5.0X& 2131& 4396& 20493& 100083& &  D-3obj& 4.7& 84.5X& 312& 812& 6840& 32228& &  D-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+& \cCell M-3obj&\cCell 474.7& \cCell >11.4X&\cCell 2131&\cCell 4396&\cCell 20493&\cCell 100084& & \cCell M-3obj&\cCell \textcolor{red}{1.9}&\cCell 208.8X&\cCell 312&\cCell 812&\cCell 6840&\cCell 32229& & \cCell M-3obj&\cCell 3691.6& \cCell >1.5X&\cCell 3484&\cCell 9661&\cCell 22572&\cCell 161716\\
+\midrule\multirow{6}{*}{findbugs}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{fop}&  3obj& 363.4& -& 336& 824& 7591& 34344&\multirow{6}{*}{h2}&  3obj& 1942.4& -& 336& 907& 7557& 36232\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 9.7&  >557.3X& 3448& 4435& 16774& 105576& &  ci& 4.0& 91.1X& 911& 1210& 7997& 40423& &  ci& 4.6& 423.2X& 943& 1274& 7959& 42799\\
+&  CSC& 11.6&  >465.9X& 2766& 4212& 16705& 96294& &  CSC& 4.5& 80.0X& 653& 1121& 7944& 37562& &  CSC& 5.2& 376.4X& 687& 1194& 7914& 40294\\
+&  Z-3obj& \textcolor{\outofcolor}{\textsc{Oot}}& -& -& -& -& -& &  Z-3obj& 111.9& 3.2X& 370& 846& 7621& 34476& &  Z-3obj& 641.5& 3.0X& 373& 925& 7590& 36354\\
+&  C-3obj& 494.5&  >10.9X& 1632& 3477& 16217& 86892& &  C-3obj& 102.3& 3.6X& 336& 824& 7591& 34344& &  C-3obj& 420.7& 4.6X& 336& 907& 7557& 36232\\
+&  D-3obj& 18.6&  >290.2X& 1652& 3478& 16217& 86899& &  D-3obj& 4.5& 81.5X& 336& 826& 7591& 34346& &  D-3obj& 7.1& 274.7X& 336& 909& 7558& 36237\\
+& \cCell M-3obj&\cCell 10.3& \cCell >521.7X&\cCell 1652&\cCell 3478&\cCell 16219&\cCell 86915& & \cCell M-3obj&\cCell \textcolor{red}{2.0}&\cCell 180.8X&\cCell 336&\cCell 825&\cCell 7591&\cCell 34345& & \cCell M-3obj&\cCell \textcolor{red}{2.6}&\cCell 735.8X&\cCell 336&\cCell 908&\cCell 7558&\cCell 36236\\
+\midrule\multirow{6}{*}{hsqldb}&  3obj& 588.8& -& 355& 840& 6980& 34854&\multirow{6}{*}{jd}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{JPC}&  3obj& 1438.2& -& 1204& 4101& 15206& 79620\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.4& 134.7X& 922& 1202& 7386& 41755& &  ci& 10.0&  >538.4X& 2714& 3750& 17878& 95602& &  ci& 10.3& 139.5X& 2252& 4934& 16138& 94701\\
+&  CSC& 5.0& 116.8X& 657& 1119& 7331& 38607& &  CSC& 11.8&  >459.2X& 2127& 3278& 17354& 87467& &  CSC& 11.4& 125.9X& 1790& 4763& 16034& 87453\\
+&  Z-3obj& 159.7& 3.7X& 382& 861& 7014& 34993& &  Z-3obj& 239.1&  >22.6X& 1600& 2818& 16979& 81855& &  Z-3obj& 173.0& 8.3X& 1234& 4139& 15233& 79803\\
+&  C-3obj& 155.4& 3.8X& 355& 840& 6980& 34854& &  C-3obj& 239.2&  >22.6X& 1491& 2751& 16875& 81318& &  C-3obj& 143.1& 10.1X& 1204& 4102& 15206& 79633\\
+&  D-3obj& 5.3& 111.9X& 355& 843& 6980& 34857& &  D-3obj& 67.1&  >80.5X& 1491& 2754& 16875& 81326& &  D-3obj& 37.8& 38.1X& 1204& 4105& 15207& 79641\\
+& \cCell M-3obj&\cCell \textcolor{red}{2.0}&\cCell 290.0X&\cCell 355&\cCell 842&\cCell 6980&\cCell 34856& & \cCell M-3obj&\cCell 19.2& \cCell >281.7X&\cCell 1491&\cCell 2754&\cCell 16875&\cCell 81327& & \cCell M-3obj&\cCell \textcolor{red}{6.9}&\cCell 208.1X&\cCell 1204&\cCell 4119&\cCell 15209&\cCell 79684\\
+\midrule\multirow{6}{*}{luindex}&  3obj& 376.2& -& 341& 916& 7018& 33560&\multirow{6}{*}{lusearch}&  3obj& 582.3& -& 357& 1112& 7670& 36437&\multirow{6}{*}{mindustry}&  3obj& 325.0& -& 321& 771& 6495& 30815\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.9& 96.5X& 920& 1283& 7409& 39677& &  ci& 4.2& 139.6X& 1032& 1490& 8094& 43014& &  ci& 3.8& 85.1X& 865& 1136& 6907& 36808\\
+&  CSC& 4.5& 82.9X& 641& 1201& 7357& 36882& &  CSC& 4.8& 121.6X& 724& 1411& 8053& 40001& &  CSC& 4.3& 75.2X& 622& 1051& 6862& 33970\\
+&  Z-3obj& 130.8& 2.9X& 364& 937& 7047& 33691& &  Z-3obj& 172.1& 3.4X& 382& 1136& 7699& 36571& &  Z-3obj& 103.7& 3.1X& 352& 799& 6540& 30962\\
+&  C-3obj& 119.0& 3.2X& 341& 916& 7018& 33561& &  C-3obj& 145.0& 4.0X& 357& 1112& 7670& 36437& &  C-3obj& 102.8& 3.2X& 321& 771& 6495& 30815\\
+&  D-3obj& 4.8& 77.7X& 341& 919& 7018& 33564& &  D-3obj& 5.0& 116.5X& 357& 1115& 7670& 36440& &  D-3obj& 3.6& 89.0X& 321& 773& 6495& 30817\\
+& \cCell M-3obj&\cCell \textcolor{red}{1.8}&\cCell 204.4X&\cCell 341&\cCell 918&\cCell 7018&\cCell 33563& & \cCell M-3obj&\cCell \textcolor{red}{2.7}&\cCell 215.7X&\cCell 357&\cCell 1114&\cCell 7670&\cCell 36439& & \cCell M-3obj&\cCell \textcolor{red}{1.7}&\cCell 190.1X&\cCell 321&\cCell 773&\cCell 6495&\cCell 30817\\
+\midrule\multirow{6}{*}{$\begin{array}{c}\text{open-}\\ \text{telemetry}\end{array}$}&  3obj& 325.3& -& 296& 760& 6303& 29955&\multirow{6}{*}{pmd}&  3obj& 872.1& -& 1333& 2348& 11851& 59851&\multirow{6}{*}{recaf}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.9& 83.2X& 825& 1117& 6713& 35944& &  ci& 6.5& 133.3X& 2265& 2950& 12365& 69505& &  ci& 20.4&  >265.1X& 5127& 7402& 29038& 187415\\
+&  CSC& 4.2& 77.5X& 581& 1035& 6668& 33157& &  CSC& 7.6& 114.3X& 1748& 2710& 12273& 64834& &  CSC& 34.0&  >158.6X& 4138& 6702& 28300& 161535\\
+&  Z-3obj& 97.7& 3.3X& 318& 783& 6335& 30066& &  Z-3obj& 269.9& 3.2X& 1374& 2369& 11882& 59988& &  Z-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+&  C-3obj& 103.3& 3.1X& 296& 760& 6303& 29955& &  C-3obj& 155.8& 5.6X& 1333& 2348& 11851& 59851& &  C-3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+&  D-3obj& 4.0& 81.5X& 296& 762& 6303& 29957& &  D-3obj& 8.7& 100.0X& 1333& 2350& 11851& 59853& &  D-3obj& 1068.5&  >5.1X& 3037& 5651& 27467& 140236\\
+& \cCell M-3obj&\cCell \textcolor{red}{1.6}&\cCell 203.3X&\cCell 296&\cCell 762&\cCell 6303&\cCell 29957& & \cCell M-3obj&\cCell 6.9&\cCell 125.8X&\cCell 1333&\cCell 2349&\cCell 11851&\cCell 59852& & \cCell M-3obj&\cCell 437.9& \cCell >12.3X&\cCell 3038&\cCell 5646&\cCell 27468&\cCell 140249\\
+\midrule\multirow{6}{*}{$\begin{array}{c}\text{sqlite-}\\ \text{jdbc}\end{array}$}&  3obj& 310.9& -& 296& 761& 6322& 30073&\multirow{6}{*}{sunflow}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{tesseract}&  3obj& 733.4& -& 341& 836& 7743& 37221\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.8& 81.0X& 826& 1118& 6732& 36062& &  ci& 8.2&  >654.5X& 2146& 2553& 13981& 72716& &  ci& 4.6& 159.1X& 1013& 1291& 8313& 45068\\
+&  CSC& 4.4& 70.3X& 581& 1036& 6687& 33275& &  CSC& 9.0&  >600.7X& 1660& 2359& 13797& 67237& &  CSC& 6.1& 120.0X& 747& 1216& 8270& 41968\\
+&  Z-3obj& 95.2& 3.3X& 318& 784& 6354& 30184& &  Z-3obj& 761.1&  >7.1X& 1116& 1976& 13382& 61274& &  Z-3obj& 188.7& 3.9X& 372& 861& 7775& 37339\\
+&  C-3obj& 101.3& 3.1X& 296& 761& 6322& 30073& &  C-3obj& 582.4&  >9.3X& 1083& 1976& 13325& 61154& &  C-3obj& 179.2& 4.1X& 341& 836& 7743& 37221\\
+&  D-3obj& 3.8& 82.5X& 296& 763& 6322& 30075& &  D-3obj& 29.6&  >182.7X& 1071& 1955& 13294& 60907& &  D-3obj& 4.3& 172.2X& 341& 838& 7743& 37223\\
+& \cCell M-3obj&\cCell \textcolor{red}{1.6}&\cCell 196.7X&\cCell 296&\cCell 763&\cCell 6322&\cCell 30075& & \cCell M-3obj&\cCell \textcolor{red}{5.0}& \cCell >1086.5X&\cCell 1071&\cCell 1954&\cCell 13294&\cCell 60919& & \cCell M-3obj&\cCell \textcolor{red}{1.8}&\cCell 409.7X&\cCell 341&\cCell 838&\cCell 7743&\cCell 37223\\
+\midrule\multirow{6}{*}{tomcat}&  3obj& 687.6& -& 345& 866& 6977& 33068&\multirow{6}{*}{$\begin{array}{c}\text{trade-}\\ \text{beans}\end{array}$}&  3obj& 4379.4& -& 401& 962& 7989& 38931&\multirow{6}{*}{xalan}&  3obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.0& 169.8X& 931& 1320& 7388& 39513& &  ci& 4.7& 927.8X& 1095& 1420& 8652& 47885& &  ci& 5.2&  >1032.5X& 1298& 2084& 10092& 54001\\
+&  CSC& 4.6& 149.1X& 665& 1243& 7340& 37125& &  CSC& 5.5& 799.2X& 786& 1314& 8546& 44610& &  CSC& 6.0&  >892.6X& 884& 1967& 10034& 50747\\
+&  Z-3obj& 158.9& 4.3X& 374& 891& 7022& 33226& &  Z-3obj& 1674.5& 2.6X& 448& 1015& 8209& 39991& &  Z-3obj& 1528.5&  >3.5X& 561& 1658& 9696& 46887\\
+&  C-3obj& 136.8& 5.0X& 345& 866& 6977& 33068& &  C-3obj& 1144.2& 3.8X& 417& 991& 8040& 39276& &  C-3obj& 452.8&  >11.9X& 539& 1636& 9665& 46753\\
+&  D-3obj& 4.6& 149.5X& 345& 868& 6977& 33070& &  D-3obj& 7.2& 604.9X& 401& 964& 7989& 38933& &  D-3obj& 18.4&  >293.8X& 539& 1639& 9665& 46756\\
+& \cCell M-3obj&\cCell \textcolor{red}{2.0}&\cCell 350.8X&\cCell 345&\cCell 868&\cCell 6977&\cCell 33070& & \cCell M-3obj&\cCell \textcolor{red}{3.3}&\cCell 1319.1X&\cCell 401&\cCell 963&\cCell 7991&\cCell 38941& & \cCell M-3obj&\cCell 5.9& \cCell >912.2X&\cCell 539&\cCell 1638&\cCell 9665&\cCell 46755\\
+\midrule\bottomrule
+\end{tabular}
+}
+\label{tab:experiment-3obj}
+\end{table}

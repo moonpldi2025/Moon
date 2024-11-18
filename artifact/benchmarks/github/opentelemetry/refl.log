@@ -1,0 +1,8 @@
+Class.getDeclaredField;<java.lang.invoke.MethodHandle: java.lang.invoke.LambdaForm form>;java.lang.invoke.MethodHandle.<clinit>;1451;isAccessible=false;
+Class.getMethod;<io.opentelemetry.javaagent.OpenTelemetryAgent: void main(java.lang.String[])>;sun.launcher.LauncherHelper.validateMainClass;670;isAccessible=false;
+Field.getName;<java.lang.invoke.MethodHandle: java.lang.invoke.LambdaForm form>;java.lang.Class.searchFields;;isAccessible=false;
+Field.getName;<java.lang.invoke.MethodHandle: java.lang.invoke.MethodType type>;java.lang.Class.searchFields;;isAccessible=false;
+Method.getModifiers;<io.opentelemetry.javaagent.OpenTelemetryAgent: void main(java.lang.String[])>;sun.launcher.LauncherHelper.validateMainClass;683;isAccessible=false;
+Method.getName;<io.opentelemetry.javaagent.OpenTelemetryAgent: void agentmain(java.lang.String,java.lang.instrument.Instrumentation)>;java.lang.Class.searchMethods;;isAccessible=false;
+Method.getName;<io.opentelemetry.javaagent.OpenTelemetryAgent: void main(java.lang.String[])>;java.lang.Class.searchMethods;;isAccessible=false;
+Method.getName;<io.opentelemetry.javaagent.OpenTelemetryAgent: void premain(java.lang.String,java.lang.instrument.Instrumentation)>;java.lang.Class.searchMethods;;isAccessible=false;

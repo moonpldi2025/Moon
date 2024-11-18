@@ -1,0 +1,85 @@
+\begin{table}
+\centering
+\caption{Precision and Efficiency results of CSC, Z-2obj, C-2obj, D-2obj, and M-2obj, whereas CI and 2OBJ are presented as baselines.}\resizebox{\textwidth}{!}{%
+\renewcommand{\arraystretch}{1.1}
+\setlength{\aboverulesep}{1.5pt}  % Space above the rule
+\setlength{\belowrulesep}{1.5pt}  % Space below the rule
+\setlength{\tabcolsep}{0.14em}\begin{tabular}{c|c|cc|cccc||c|c|cc|cccc||c|c|cc|cccc}
+
+\toprule
+Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}&Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}&Program & Analysis & \textbf{T}&\textbf{S}&\makecell{\#\textbf{MFC}}&\makecell{\#\textbf{PCS}}&\makecell{\#\textbf{RM}}&\makecell{\#\textbf{CE}}\\
+ \midrule\multirow{6}{*}{antlr}&  2obj& 26.5& -& 510& 1631& 7806& 51264&\multirow{6}{*}{avrora}&  2obj& 18.8& -& 568& 933& 10940& 48361&\multirow{6}{*}{batik}&  2obj& 810.7& -& 2142& 4956& 20254& 107822\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.8& 5.5X& 1124& 1976& 8190& 57341& &  ci& 5.5& 3.4X& 1188& 1372& 11373& 55476& &  ci& 13.3& 61.0X& 3403& 5810& 20994& 127604\\
+&  CSC& 5.7& 4.6X& 812& 1896& 8153& 54460& &  CSC& 6.3& 3.0X& 882& 1283& 11282& 52535& &  CSC& 18.6& 43.6X& 2846& 5524& 20819& 121105\\
+&  Z-2obj& 12.6& 2.1X& 528& 1650& 7836& 51391& &  Z-2obj& 6.1& 3.1X& 595& 948& 10969& 48466& &  Z-2obj& 370.6& 2.2X& 2161& 4968& 20265& 107892\\
+&  C-2obj& 6.2& 4.3X& 510& 1631& 7806& 51264& &  C-2obj& 5.7& 3.3X& 568& 933& 10940& 48361& &  C-2obj& 375.2& 2.2X& 2142& 4956& 20254& 107822\\
+&  D-2obj& 5.3& 5.0X& 510& 1631& 7806& 51264& &  D-2obj& 3.9& 4.8X& 568& 933& 10940& 48361& &  D-2obj& 245.7& 3.3X& 2142& 4958& 20254& 107824\\
+& \cCell M-2obj&\cCell \textcolor{red}{2.4}&\cCell 11.0X&\cCell 510&\cCell 1631&\cCell 7806&\cCell 51264& & \cCell M-2obj&\cCell \textcolor{red}{2.4}&\cCell 7.8X&\cCell 568&\cCell 933&\cCell 10940&\cCell 48361& & \cCell M-2obj&\cCell 201.7&\cCell 4.0X&\cCell 2150&\cCell 4962&\cCell 20254&\cCell 107828\\
+\midrule\multirow{6}{*}{biojava}&  2obj& 13.5& -& 436& 843& 7440& 34802&\multirow{6}{*}{bloat}&  2obj& 352.9& -& 1285& 1566& 9019& 56577&\multirow{6}{*}{$\begin{array}{c}\text{bytecode-}\\ \text{viewer}\end{array}$}&  2obj& 2992.2& -& 4064& 4626& 14210& 100280\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.5& 3.0X& 1046& 1236& 7910& 41678& &  ci& 5.5& 64.5X& 2082& 2249& 9454& 67338& &  ci& 9.4& 316.6X& 4723& 5616& 14637& 110795\\
+&  CSC& 5.7& 2.4X& 687& 1150& 7853& 38403& &  CSC& 7.6& 46.4X& 1594& 2166& 9414& 63909& &  CSC& 21.7& 138.0X& 4366& 5547& 14601& 106506\\
+&  Z-2obj& 4.5& 3.0X& 449& 876& 7487& 34947& &  Z-2obj& 279.7& 1.3X& 1309& 1597& 9061& 56784& &  Z-2obj& 2121.9& 1.4X& 4080& 4644& 14246& 100443\\
+&  C-2obj& 4.6& 3.0X& 436& 843& 7440& 34802& &  C-2obj& 202.7& 1.7X& 1285& 1566& 9019& 56577& &  C-2obj& 1662.4& 1.8X& 4064& 4626& 14210& 100280\\
+&  D-2obj& 3.3& 4.1X& 436& 843& 7440& 34802& &  D-2obj& 15.0& 23.5X& 1285& 1566& 9019& 56577& &  D-2obj& 686.2& 4.4X& 4064& 4626& 14210& 100280\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.6}&\cCell 8.2X&\cCell 436&\cCell 843&\cCell 7440&\cCell 34802& & \cCell M-2obj&\cCell 9.4&\cCell 37.7X&\cCell 1285&\cCell 1566&\cCell 9019&\cCell 56577& & \cCell M-2obj&\cCell 216.5&\cCell 13.8X&\cCell 4065&\cCell 4629&\cCell 14210&\cCell 100283\\
+\midrule\multirow{6}{*}{chart}&  2obj& 100.2& -& 1337& 2027& 15149& 72650&\multirow{6}{*}{$\begin{array}{c}\text{check-}\\ \text{style}\end{array}$}&  2obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -&\multirow{6}{*}{$\begin{array}{c}\text{classy-}\\ \text{shark}\end{array}$}&  2obj& 22.3& -& 564& 1117& 9393& 44257\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 9.2& 10.9X& 2560& 2703& 15923& 86433& &  ci& 8.2&  >657.7X& 1939& 2760& 12766& 80169& &  ci& 5.3& 4.2X& 1323& 1682& 10178& 56231\\
+&  CSC& 10.4& 9.6X& 1914& 2405& 15545& 78847& &  CSC& 10.3&  >521.7X& 1503& 2641& 12713& 74197& &  CSC& 7.1& 3.1X& 876& 1400& 9489& 48577\\
+&  Z-2obj& 15.9& 6.3X& 1376& 2045& 15234& 72989& &  Z-2obj& 1446.3&  >3.7X& 1132& 2249& 12342& 67170& &  Z-2obj& 8.6& 2.6X& 581& 1124& 9412& 44332\\
+&  C-2obj& 42.7& 2.3X& 1337& 2027& 15149& 72650& &  C-2obj& 3804.2&  >1.4X& 1109& 2216& 12307& 66970& &  C-2obj& 7.6& 2.9X& 564& 1117& 9393& 44257\\
+&  D-2obj& 18.2& 5.5X& 1337& 2027& 15149& 72658& &  D-2obj& 17.6&  >307.7X& 1109& 2216& 12307& 66970& &  D-2obj& 4.9& 4.6X& 564& 1117& 9393& 44257\\
+& \cCell M-2obj&\cCell \textcolor{red}{7.9}&\cCell 12.6X&\cCell 1337&\cCell 2027&\cCell 15149&\cCell 72658& & \cCell M-2obj&\cCell \textcolor{red}{7.8}& \cCell >695.9X&\cCell 1110&\cCell 2216&\cCell 12307&\cCell 66970& & \cCell M-2obj&\cCell \textcolor{red}{2.5}&\cCell 8.7X&\cCell 564&\cCell 1117&\cCell 9393&\cCell 44257\\
+\midrule\multirow{6}{*}{dcevm}&  2obj& 374.1& -& 2225& 4417& 20531& 100557&\multirow{6}{*}{ddjava}&  2obj& 10.9& -& 367& 815& 6840& 32248&\multirow{6}{*}{eclipse}&  2obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 13.5& 27.7X& 3593& 5669& 21503& 124314& &  ci& 4.1& 2.7X& 880& 1177& 7249& 38462& &  ci& 18.8&  >287.7X& 5090& 10672& 23386& 182975\\
+&  CSC& 15.2& 24.6X& 2917& 4932& 20958& 108001& &  CSC& 4.8& 2.3X& 618& 1093& 7205& 35797& &  CSC& 20.7&  >261.4X& 4282& 10250& 22977& 172521\\
+&  Z-2obj& 143.0& 2.6X& 2316& 4464& 20573& 100824& &  Z-2obj& 5.0& 2.2X& 384& 827& 6855& 32316& &  Z-2obj& \textcolor{\outofcolor}{\textsc{Oom}}& -& -& -& -& -\\
+&  C-2obj& 186.5& 2.0X& 2227& 4425& 20532& 100594& &  C-2obj& 3.0& 3.6X& 367& 815& 6840& 32248& &  C-2obj& 1301.6&  >4.1X& 3612& 9703& 22627& 162654\\
+&  D-2obj& 165.0& 2.3X& 2231& 4431& 20532& 100608& &  D-2obj& 2.5& 4.3X& 367& 815& 6840& 32248& &  D-2obj& 522.0&  >10.3X& 3612& 9703& 22627& 162654\\
+& \cCell M-2obj&\cCell 63.3&\cCell 5.9X&\cCell 2241&\cCell 4433&\cCell 20535&\cCell 100629& & \cCell M-2obj&\cCell \textcolor{red}{1.8}&\cCell 5.9X&\cCell 367&\cCell 815&\cCell 6840&\cCell 32248& & \cCell M-2obj&\cCell 245.5& \cCell >22.0X&\cCell 3612&\cCell 9703&\cCell 22627&\cCell 162659\\
+\midrule\multirow{6}{*}{findbugs}&  2obj& 811.2& -& 2013& 3508& 16264& 87808&\multirow{6}{*}{fop}&  2obj& 10.2& -& 395& 830& 7591& 34364&\multirow{6}{*}{h2}&  2obj& 17.0& -& 398& 911& 7559& 36261\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 9.7& 83.7X& 3448& 4435& 16774& 105576& &  ci& 4.0& 2.5X& 911& 1210& 7997& 40423& &  ci& 4.6& 3.7X& 943& 1274& 7959& 42799\\
+&  CSC& 11.6& 70.0X& 2766& 4212& 16705& 96294& &  CSC& 4.5& 2.2X& 653& 1121& 7944& 37562& &  CSC& 5.2& 3.3X& 687& 1194& 7914& 40294\\
+&  Z-2obj& 132.5& 6.1X& 2044& 3512& 16276& 87855& &  Z-2obj& 4.5& 2.3X& 417& 852& 7621& 34496& &  Z-2obj& 5.8& 2.9X& 423& 929& 7591& 36379\\
+&  C-2obj& 44.0& 18.4X& 2014& 3508& 16264& 87808& &  C-2obj& 3.1& 3.3X& 395& 830& 7591& 34364& &  C-2obj& 4.9& 3.5X& 398& 911& 7559& 36261\\
+&  D-2obj& 14.8& 54.8X& 2014& 3508& 16264& 87808& &  D-2obj& 2.6& 3.8X& 395& 830& 7591& 34364& &  D-2obj& 3.7& 4.6X& 398& 911& 7559& 36261\\
+& \cCell M-2obj&\cCell \textcolor{red}{8.7}&\cCell 93.1X&\cCell 2017&\cCell 3511&\cCell 16268&\cCell 87838& & \cCell M-2obj&\cCell \textcolor{red}{1.8}&\cCell 5.8X&\cCell 395&\cCell 830&\cCell 7591&\cCell 34364& & \cCell M-2obj&\cCell \textcolor{red}{1.9}&\cCell 9.1X&\cCell 398&\cCell 911&\cCell 7559&\cCell 36261\\
+\midrule\multirow{6}{*}{hsqldb}&  2obj& 11.8& -& 407& 847& 6981& 34881&\multirow{6}{*}{jd}&  2obj& 58.0& -& 1592& 2831& 17000& 82056&\multirow{6}{*}{JPC}&  2obj& 65.3& -& 1356& 4237& 15553& 81294\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.4& 2.7X& 922& 1202& 7386& 41755& &  ci& 10.0& 5.8X& 2714& 3750& 17878& 95602& &  ci& 10.3& 6.3X& 2252& 4934& 16138& 94701\\
+&  CSC& 5.0& 2.3X& 657& 1119& 7331& 38607& &  CSC& 11.8& 4.9X& 2127& 3278& 17354& 87467& &  CSC& 11.4& 5.7X& 1790& 4763& 16034& 87453\\
+&  Z-2obj& 4.2& 2.8X& 428& 868& 7015& 35020& &  Z-2obj& 15.7& 3.7X& 1686& 2871& 17045& 82387& &  Z-2obj& 18.7& 3.5X& 1382& 4274& 15582& 81489\\
+&  C-2obj& 3.5& 3.4X& 407& 847& 6981& 34881& &  C-2obj& 19.8& 2.9X& 1592& 2831& 17000& 82060& &  C-2obj& 30.1& 2.2X& 1356& 4238& 15553& 81307\\
+&  D-2obj& 3.0& 3.9X& 407& 847& 6981& 34881& &  D-2obj& 19.4& 3.0X& 1592& 2832& 17000& 82061& &  D-2obj& 27.5& 2.4X& 1356& 4243& 15554& 81319\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.8}&\cCell 6.8X&\cCell 407&\cCell 847&\cCell 6981&\cCell 34881& & \cCell M-2obj&\cCell \textcolor{red}{9.0}&\cCell 6.5X&\cCell 1597&\cCell 2832&\cCell 17000&\cCell 82061& & \cCell M-2obj&\cCell 13.0&\cCell 5.0X&\cCell 1360&\cCell 4243&\cCell 15554&\cCell 81321\\
+\midrule\multirow{6}{*}{luindex}&  2obj& 10.7& -& 395& 923& 7019& 33587&\multirow{6}{*}{lusearch}&  2obj& 11.8& -& 409& 1119& 7671& 36464&\multirow{6}{*}{mindustry}&  2obj& 9.3& -& 378& 778& 6497& 30844\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.9& 2.7X& 920& 1283& 7409& 39677& &  ci& 4.2& 2.8X& 1032& 1490& 8094& 43014& &  ci& 3.8& 2.4X& 865& 1136& 6907& 36808\\
+&  CSC& 4.5& 2.4X& 641& 1201& 7357& 36882& &  CSC& 4.8& 2.5X& 724& 1411& 8053& 40001& &  CSC& 4.3& 2.2X& 622& 1051& 6862& 33970\\
+&  Z-2obj& 4.1& 2.6X& 417& 944& 7048& 33718& &  Z-2obj& 4.8& 2.5X& 434& 1143& 7700& 36598& &  Z-2obj& 4.2& 2.2X& 398& 805& 6540& 30984\\
+&  C-2obj& 3.2& 3.3X& 395& 923& 7019& 33588& &  C-2obj& 3.4& 3.5X& 409& 1119& 7671& 36464& &  C-2obj& 3.0& 3.1X& 378& 778& 6497& 30844\\
+&  D-2obj& 2.7& 3.9X& 395& 923& 7019& 33588& &  D-2obj& 3.1& 3.8X& 409& 1119& 7671& 36464& &  D-2obj& 2.1& 4.5X& 378& 778& 6497& 30844\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.6}&\cCell 6.9X&\cCell 395&\cCell 923&\cCell 7019&\cCell 33588& & \cCell M-2obj&\cCell \textcolor{red}{1.6}&\cCell 7.2X&\cCell 409&\cCell 1119&\cCell 7671&\cCell 36464& & \cCell M-2obj&\cCell \textcolor{red}{1.4}&\cCell 6.7X&\cCell 378&\cCell 778&\cCell 6497&\cCell 30844\\
+\midrule\multirow{6}{*}{$\begin{array}{c}\text{open-}\\ \text{telemetry}\end{array}$}&  2obj& 9.2& -& 351& 767& 6303& 29976&\multirow{6}{*}{pmd}&  2obj& 32.5& -& 1398& 2354& 11851& 59910&\multirow{6}{*}{recaf}&  2obj& 475.3& -& 3247& 5701& 27823& 142265\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.9& 2.4X& 825& 1117& 6713& 35944& &  ci& 6.5& 5.0X& 2265& 2950& 12365& 69505& &  ci& 20.4& 23.3X& 5127& 7402& 29038& 187415\\
+&  CSC& 4.2& 2.2X& 581& 1035& 6668& 33157& &  CSC& 7.6& 4.3X& 1748& 2710& 12273& 64834& &  CSC& 34.0& 14.0X& 4138& 6702& 28300& 161535\\
+&  Z-2obj& 3.5& 2.6X& 365& 789& 6335& 30086& &  Z-2obj& 14.5& 2.2X& 1428& 2375& 11882& 60047& &  Z-2obj& 166.4& 2.9X& 3378& 5732& 27857& 142450\\
+&  C-2obj& 2.8& 3.3X& 351& 767& 6303& 29976& &  C-2obj& 17.4& 1.9X& 1398& 2354& 11851& 59910& &  C-2obj& 203.0& 2.3X& 3249& 5716& 27823& 142326\\
+&  D-2obj& 2.3& 4.0X& 351& 767& 6303& 29976& &  D-2obj& 6.5& 5.0X& 1398& 2354& 11851& 59910& &  D-2obj& 161.8& 2.9X& 3249& 5722& 27823& 142332\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.3}&\cCell 7.0X&\cCell 351&\cCell 767&\cCell 6303&\cCell 29976& & \cCell M-2obj&\cCell \textcolor{red}{4.3}&\cCell 7.5X&\cCell 1398&\cCell 2354&\cCell 11851&\cCell 59910& & \cCell M-2obj&\cCell 104.6&\cCell 4.5X&\cCell 3257&\cCell 5722&\cCell 27826&\cCell 142365\\
+\midrule\multirow{6}{*}{$\begin{array}{c}\text{sqlite-}\\ \text{jdbc}\end{array}$}&  2obj& 8.7& -& 351& 768& 6322& 30094&\multirow{6}{*}{sunflow}&  2obj& 35.7& -& 1172& 1965& 13313& 61168&\multirow{6}{*}{tesseract}&  2obj& 11.7& -& 399& 843& 7743& 37267\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 3.8& 2.3X& 826& 1118& 6732& 36062& &  ci& 8.2& 4.3X& 2146& 2553& 13981& 72716& &  ci& 4.6& 2.5X& 1013& 1291& 8313& 45068\\
+&  CSC& 4.4& 2.0X& 581& 1036& 6687& 33275& &  CSC& 9.0& 4.0X& 1660& 2359& 13797& 67237& &  CSC& 6.1& 1.9X& 747& 1216& 8270& 41968\\
+&  Z-2obj& 4.3& 2.0X& 365& 790& 6354& 30204& &  Z-2obj& 9.2& 3.9X& 1215& 1988& 13401& 61537& &  Z-2obj& 4.5& 2.6X& 421& 867& 7775& 37383\\
+&  C-2obj& 2.7& 3.2X& 351& 768& 6322& 30094& &  C-2obj& 10.5& 3.4X& 1186& 1994& 13346& 61442& &  C-2obj& 3.1& 3.8X& 399& 843& 7743& 37267\\
+&  D-2obj& 2.2& 3.9X& 351& 768& 6322& 30094& &  D-2obj& 7.7& 4.7X& 1172& 1965& 13314& 61173& &  D-2obj& 2.7& 4.3X& 399& 843& 7743& 37267\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.4}&\cCell 6.4X&\cCell 351&\cCell 768&\cCell 6322&\cCell 30094& & \cCell M-2obj&\cCell \textcolor{red}{3.9}&\cCell 9.1X&\cCell 1172&\cCell 1965&\cCell 13314&\cCell 61173& & \cCell M-2obj&\cCell \textcolor{red}{1.6}&\cCell 7.5X&\cCell 399&\cCell 843&\cCell 7743&\cCell 37267\\
+\midrule\multirow{6}{*}{tomcat}&  2obj& 16.8& -& 402& 871& 6978& 33095&\multirow{6}{*}{$\begin{array}{c}\text{trade-}\\ \text{beans}\end{array}$}&  2obj& 26.7& -& 466& 967& 8021& 39111&\multirow{6}{*}{xalan}&  2obj& 372.9& -& 592& 1643& 9666& 46782\\
+\cmidrule{2-8}\cmidrule{10-16}\cmidrule{18-24}&  ci& 4.0& 4.1X& 931& 1320& 7388& 39513& &  ci& 4.7& 5.7X& 1095& 1420& 8652& 47885& &  ci& 5.2& 71.3X& 1298& 2084& 10092& 54001\\
+&  CSC& 4.6& 3.6X& 665& 1243& 7340& 37125& &  CSC& 5.5& 4.9X& 786& 1314& 8546& 44610& &  CSC& 6.0& 61.6X& 884& 1967& 10034& 50747\\
+&  Z-2obj& 5.3& 3.2X& 421& 895& 7022& 33248& &  Z-2obj& 11.1& 2.4X& 501& 1017& 8213& 40042& &  Z-2obj& 177.7& 2.1X& 609& 1665& 9697& 46916\\
+&  C-2obj& 4.0& 4.2X& 402& 871& 6978& 33095& &  C-2obj& 6.7& 4.0X& 481& 999& 8065& 39461& &  C-2obj& 209.0& 1.8X& 592& 1643& 9666& 46782\\
+&  D-2obj& 2.6& 6.5X& 402& 871& 6978& 33095& &  D-2obj& 4.3& 6.3X& 466& 967& 8021& 39111& &  D-2obj& 14.1& 26.5X& 592& 1643& 9666& 46782\\
+& \cCell M-2obj&\cCell \textcolor{red}{1.7}&\cCell 10.1X&\cCell 402&\cCell 871&\cCell 6978&\cCell 33095& & \cCell M-2obj&\cCell \textcolor{red}{2.6}&\cCell 10.4X&\cCell 466&\cCell 967&\cCell 8021&\cCell 39111& & \cCell M-2obj&\cCell \textcolor{red}{5.1}&\cCell 73.1X&\cCell 592&\cCell 1643&\cCell 9666&\cCell 46782\\
+\midrule\bottomrule
+\end{tabular}
+}
+\label{tab:experiment-2obj}
+\end{table}

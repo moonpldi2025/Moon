@@ -1,0 +1,25 @@
+\begin{table}
+\centering
+\caption{Heuristics time comparison of \zipper, \conch, \debloaterx, and \toolname}
+\label{fig:time-of-preanalysis}\resizebox{\textwidth}{!}{%
+\renewcommand{\arraystretch}{1.1}
+\setlength{\aboverulesep}{1.2pt}
+\setlength{\belowrulesep}{1.2pt}
+\setlength{\tabcolsep}{0.15em}
+\begin{tabular}{>{\centering\arraybackslash}m{2.2cm}|>{\centering\arraybackslash}m{0.8cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.9cm}>{\centering\arraybackslash}m{1.8cm}|>{\centering\arraybackslash}m{2.2cm}|>{\centering\arraybackslash}m{0.8cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.9cm}>{\centering\arraybackslash}m{1.8cm}||>{\centering\arraybackslash}m{2.2cm}|>{\centering\arraybackslash}m{0.8cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.9cm}>{\centering\arraybackslash}m{1.8cm}|}
+\toprule
+Program & CI & \zipper & \conch & \debloaterx & \textbf{\toolname}  & Program & CI & \zipper & \conch & \debloaterx & \textbf{\toolname}  & Program & CI & \zipper & \conch & \debloaterx & \textbf{\toolname} \\
+\midrule
+antlr & 4.8 & 5.9 & 2.7 & 7.0 & \textbf{3.6} & ddjava & 4.1 & 3.9 & 1.9 & 4.3 & \textbf{2.5} & mindustry & 3.8 & 3.9 & 1.6 & 3.9 & \textbf{2.1}\\
+avrora & 5.5 & 6.4 & 3.6 & 10.2 & \textbf{4.7} & eclipse & 18.8 & 208.7 & 207.6 & 57.8 & \textbf{28.0} & opentelemetry & 3.9 & 3.4 & 1.2 & 3.7 & \textbf{2.2}\\
+batik & 13.3 & 43.9 & 41.8 & 38.1 & \textbf{17.4} & findbugs & 9.7 & 22.2 & 22.6 & 35.6 & \textbf{17.3} & pmd & 6.5 & 10.8 & 9.2 & 12.6 & \textbf{6.0}\\
+biojava & 4.5 & 4.5 & 1.7 & 5.1 & \textbf{2.7} & fop & 4.0 & 4.6 & 2.1 & 5.2 & \textbf{2.4} & recaf & 20.4 & 74.8 & 73.0 & 86.3 & \textbf{38.2}\\
+bloat & 5.5 & 6.3 & 6.3 & 9.7 & \textbf{5.5} & h2 & 4.6 & 4.3 & 2.0 & 5.2 & \textbf{2.6} & sqlite-jdbc & 3.8 & 3.4 & 1.3 & 3.7 & \textbf{2.0}\\
+bytecodeviewer & 9.4 & 14.6 & 21.3 & 29.7 & \textbf{20.5} & hsqldb & 4.4 & 4.2 & 1.6 & 4.4 & \textbf{2.5} & sunflow & 8.2 & 9.7 & 13.4 & 15.2 & \textbf{7.0}\\
+chart & 9.2 & 27.8 & 18.6 & 21.1 & \textbf{9.5} & jd & 10.0 & 16.1 & 32.2 & 22.9 & \textbf{10.4} & tesseract & 4.6 & 4.7 & 2.3 & 5.0 & \textbf{2.9}\\
+checkstyle & 8.2 & 35.0 & 9.6 & 17.5 & \textbf{9.1} & JPC & 10.3 & 11.1 & 16.4 & 19.9 & \textbf{8.0} & tomcat & 4.0 & 4.5 & 1.9 & 4.6 & \textbf{2.6}\\
+classyshark & 5.3 & 8.3 & 6.3 & 8.3 & \textbf{4.5} & luindex & 3.9 & 4.1 & 1.6 & 4.5 & \textbf{2.5} & tradebeans & 4.7 & 6.5 & 3.5 & 6.4 & \textbf{3.2}\\
+dcevm & 13.5 & 38.8 & 45.1 & 35.6 & \textbf{16.4} & lusearch & 4.2 & 4.8 & 1.7 & 5.8 & \textbf{2.7} & xalan & 5.2 & 11.6 & 4.1 & 8.3 & \textbf{4.3}\\
+\bottomrule
+\end{tabular}}
+\end{table}
